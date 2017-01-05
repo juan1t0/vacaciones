@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+int sizze(string x){
+    int a=0;
+    for(;x[a]!='\0';a++)
+        ;
+    return a;
+}
+
+int main()
+{
+    string b;
+    char a[30];
+    cin.getline(a,30);
+
+    int siz= sizze(a);
+    siz -= 1;
+    cout << siz<<endl;
+
+    for(;siz>=0;siz--)
+        b+= a[siz];
+        
+    cout << b<<endl;
+    return 0;
+}
