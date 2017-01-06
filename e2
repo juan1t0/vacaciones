@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int producto_escalar(vector<int> a , vector<int> b)
+{
+    int res;
+    for (int i =0;i< a.size();i++)
+        res += (a[i]* b[i]);
+    return res;
+}
+int main()
+{
+    vector<int> r;
+    vector<int> f;
+    int escal;
+    for(int i=0;i<10;i++){
+        r.push_back((i-1)+10);
+        f.push_back((i+2)*3);
+    }
+    escal=producto_escalar(r,f);
+    cout << escal << endl;
+    return 0;
+}
